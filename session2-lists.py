@@ -1,38 +1,70 @@
 #!/usr/bin/env python
+
+
+# While loops
+# While something is true, execute the code in the loop
+# while loops wait for a condition to be false to stop
+"""
+counter = 1
+while counter < 100:
+    print(counter)
+    counter += 4 #short form: counter = counter + 4
+    # Watch out: stack overflow error
+
+"""
+
+"""
+count2 = 0
+while count2 > 1:
+    print("This shouldn't print")
+"""
+
+
+
+"""
 # Lists
 
 # lists contain multiple elements
 # Index starts at 0
 
 # Adding to lists
-"""
 list1 = []
 list2 = [1, 2, 3]
 
-list1.append("Hi")
+print(type(list1))
+
+list1.append("Bye")
+list1.append("Hi") #add to the end as-is
+# append will always add 1 element
+
 print(list1)
 
-list1.extend(list2)
+#list1.extend(list2)  # like pouring in a basket
+
+list1.append(list2)
 print(list1)
 
 list1.insert(1, "boo")
 print(list1)
-"""
+
+print(len(list1)) #len() tells you the number of elements inside
 
 # Removing from a list
+
+list1.pop(2) # The index
+print(list1)
+
+list1.remove('Bye') #looks for an item
+print(list1)
+
+del(list1[1][0]) #index in square brackets
+print(list1)
+
+list1.clear() #throw everything in the list out
+print(list1)
 """
-list1.pop(0)
-print(list1)
 
-list1.remove(3)
-print(list1)
 
-del(list1[0])
-print(list1)
-
-list1.clear()
-print(list1)
-"""
 
 
 
