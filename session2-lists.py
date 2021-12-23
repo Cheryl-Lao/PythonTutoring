@@ -102,12 +102,13 @@ print(count)
 
 
 # Remove all items of type str in a list
-"""
-a1 = [1, 2.1, "three"]
 
-for item in a1:
-    print(type(item))
-    if type(item) is str:
-        a1.remove(item)
+a1 = ["beep", 1, "boop", 2.1, "bop", 1.1]
+i = 0
+while i < len(a1):
+    if type(a1[i]) is str:
+        a1.remove(a1[i])
+    else:
+        i += 1
 print(a1)
-"""
+
