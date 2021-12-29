@@ -1,23 +1,36 @@
 #!/usr/bin/env python
 
 # -- String Splicing --
+"""
 string_to_splice = "0123456789"
-print(string_to_splice[1:3])
-print(string_to_splice[:3])
-print(string_to_splice[1:])
+#print(string_to_splice[2:4])
+#print(string_to_splice[:3])
+print(string_to_splice[3:])
+"""
 
+"""
 # going backwards with the range function
-for num in range(10, 2, -2):
+for num in range(10, 2, -2): # start, stop, step
     print(num)
+"""
+
+# -- break --
+"""
+for i in range(7):
+    if i == 4:
+        break
+    print(i)
+"""
 
 # -- 2D arrays --
 class tictactoe_board():
     def __init__(self):
-        self.board = [["-", "-", "-"], ["-", "-", "-"], ["-", "-", "-"]]
+        self.board = [["-", "-", "-"], ["-", "-", "-"], ["-", "-", "-"]] #list of rows
 
     # Plays a certain character to the given location
     def playPosition(self, character,  i, j):
         self.board[i][j] = character
+
     def __str__(self):
         board_str = ""
         for row in self.board:
@@ -27,10 +40,13 @@ class tictactoe_board():
 
         return board_str
 
-
 ttb = tictactoe_board()
-#print(ttb)
-ttb.playPosition("X", 0, 0)
+ttb.playPosition("X", 0, 2)
+print(ttb)
+
+"""
+
+
 ttb.playPosition("O", 0, 1)
 ttb.playPosition("X", 0, 2)
 ttb.playPosition("O", 1, 0)
@@ -41,6 +57,8 @@ ttb.playPosition("X", 2, 1)
 ttb.playPosition("O", 2, 2)
 
 print(ttb)
+"""
+
 
 
 # -- Recursion --
