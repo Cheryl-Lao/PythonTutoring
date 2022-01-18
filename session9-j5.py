@@ -55,19 +55,3 @@ for i in range(rows):
 
 # Output gold count
 print(gold_count)
-
-
-
-# Practice problem: Given a list of integers that's sorted from smallest to largest and a target value,
-# return the index where that item is found or -1 if it's not in the list
-def search(nums, target):
-    left, right = 0, len(nums) - 1
-    while left <= right:
-        middle = left + (right - left) // 2
-        if nums[middle] == target:
-            return middle
-        if target < nums[middle]:
-            right = middle - 1
-        else:
-            left = middle + 1
-    return -1
